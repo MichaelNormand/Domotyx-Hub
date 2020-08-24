@@ -1,0 +1,31 @@
+version: '3'
+services: 
+    frontend:
+        build: 
+            context: './frontend'
+            dockerfile: 'Dockerfile'
+        volumes: 
+            - /frontend/node_modules
+            - ./frontend:/frontend
+        ports:
+            - '3000:3000'
+        restart: on-failure
+        container_name: domotyx-hub-frontend
+    backend:
+        build:
+            context: './backend'
+            dockerfile: 'Dockerfile'
+        volumes: 
+            - /backend/node_modules
+            - ./backend:/backend
+        ports:
+            - '5000:5000'
+        restart: on-failure
+        container_name: domotyx-hub-backend
+    database:
+        image: postgres
+        ports:
+            - 5432:5432
+        env_file: 
+            - backend/.env
+        container_name: domotyx-hub-database
