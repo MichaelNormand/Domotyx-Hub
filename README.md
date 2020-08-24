@@ -8,11 +8,11 @@ You can also get the source code by downloading the source code by clicking on t
 ## Dependencies
 Domotyx Hub is running on these different technologies:
 
- - [Node JS](https://www.google.com), for the REST API developpement
- - [React JS](https://www.google.com), for the frontend developpement part
- - [PostgreSQL](https://www.google.com), for the database part
- - [Docker](https://www.google.com), for the production part
- - [Docker Compose](https://www.google.com), for fast deployement on our server.
+ - [Node JS](https://nodejs.org/), for the REST API developpement
+ - [React JS](https://reactjs.org/), for the frontend developpement part
+ - [PostgreSQL](https://www.postgresql.org/), for the database part
+ - [Docker](https://www.docker.com/), for the production part
+ - [Docker Compose](https://docs.docker.com/compose/install/), for fast deployement on our server.
  
 We strongly suggest to install at least Node JS, React JS, Docker and Docker Compose for an easy setup, which will be explained in the next sections. If you don't plan to use Docker for your production deployement, you can stick with Node JS, React JS and PostgreSQL. We strongly suggest to use Docker for an easy experience, even in developpement. We use Docker in developpement to, for instance, get a prebuilt version of PostgreSQL, without clicking in an installation manager.
 ## Getting things ready for developpement
