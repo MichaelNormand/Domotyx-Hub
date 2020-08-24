@@ -8,21 +8,22 @@ You can also get the source code by downloading the source code by clicking on t
 ## Dependencies
 Domotyx Hub is running on these different technologies:
 
- - [Node JS](https://nodejs.org/), for the REST API developpement
- - [React JS](https://reactjs.org/), for the frontend developpement part
- - [PostgreSQL](https://www.postgresql.org/), for the database part
- - [Docker](https://www.docker.com/), for the production part
- - [Docker Compose](https://docs.docker.com/compose/install/), for fast deployement on our server.
+ - [Node JS](https://www.google.com), for the REST API developpement
+ - [React JS](https://www.google.com), for the frontend developpement part
+ - [PostgreSQL](https://www.google.com), for the database part
+ - [Docker](https://www.google.com), for the production part
+ - [Docker Compose](https://www.google.com), for fast deployement on our server.
  
 We strongly suggest to install at least Node JS, React JS, Docker and Docker Compose for an easy setup, which will be explained in the next sections. If you don't plan to use Docker for your production deployement, you can stick with Node JS, React JS and PostgreSQL. We strongly suggest to use Docker for an easy experience, even in developpement. We use Docker in developpement to, for instance, get a prebuilt version of PostgreSQL, without clicking in an installation manager.
 ## Getting things ready for developpement
 After getting the source code, and getting the minimum requirements for developping on the Domotyx Hub, you need to run the command `npm install` in the **frontend and backend folders**.
 
 When it's done, create a .env file in the **backend folder** and add these following parameters in it: 
-`POSTGRES_USER=your_database_username`
-`POSTGRES_PASSWORD=your_database_password`
-`POSTGRES_HOST=localhost`
-`POSTGRES_PORT=5432`.
+
+ - `POSTGRES_USER=your_database_username`
+ - `POSTGRES_PASSWORD=your_database_password`
+ - `POSTGRES_HOST=localhost`
+ - `POSTGRES_PORT=5432`
 
 For those who doesn't plan to use docker, the setup is pretty much over. Happy Coding!
 
