@@ -1,6 +1,7 @@
+require('dotenv').config({ path: __dirname+'/./../.env' })
 const express = require('express')
 const app = express()
-const port = 5000
+const port = process.env.REST_API_PORT || 5000
 
 
 const path = require('path')

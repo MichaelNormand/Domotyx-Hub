@@ -8,7 +8,7 @@ services:
             - /frontend/node_modules
             - ./frontend:/frontend
         ports:
-            - '3000:3000'
+            - "${WEB_CLIENT_PORT}:3000"
         restart: on-failure
         container_name: domotyx-hub-frontend
     backend:
@@ -19,13 +19,20 @@ services:
             - /backend/node_modules
             - ./backend:/backend
         ports:
-            - '5000:5000'
+            - "${REST_API_PORT}:${REST_API_PORT}"
         restart: on-failure
         container_name: domotyx-hub-backend
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+            - MONGO_INITDB_HOST=${MONGO_INITDB_HOST}
+            - MONGO_INITDB_PORT=${MONGO_INITDB_PORT}
+            - REST_API_PORT=${REST_API_PORT}
+            - WEB_CLIENT_PORT=${WEB_CLIENT_PORT}
     database:
-        image: postgres
-        ports:
-            - 5432:5432
+        image: mongo:latest
         env_file: 
-            - backend/.env
+            - .env
+        ports:
+            - "${MONGO_INITDB_PORT}:27017"
         container_name: domotyx-hub-database
